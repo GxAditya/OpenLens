@@ -1,14 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { EditorProvider } from '@/contexts/EditorContext';
+import { useEditor } from '@/contexts/EditorContext';
+import { Toolbar } from '@/components/editor/Toolbar';
+import { CanvasPreview } from '@/components/editor/CanvasPreview';
+import { DropZone } from '@/components/editor/DropZone';
+import { ToolPanel } from '@/components/editor/ToolPanel';
+import { BatchStrip } from '@/components/editor/BatchStrip';
+import { ProcessingOverlay } from '@/components/editor/ProcessingOverlay';
 
-const Index = () => {
+function EditorLayout() {
+  const { activeImage } = useEditor();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="h-screen flex flex-col overflow-hidden">
+      <Toolbar />
+      <div className="flex-1 flex flex-col min-h-0 relative">
+        {activeImage ? <CanvasPreview /> : <DropZone />}
+        <ToolPanel />
+        <BatchStrip />
       </div>
+      <ProcessingOverlay />
     </div>
   );
-};
+}
+
+const Index = () => (
+  <EditorProvider>
+    <EditorLayout />
+  </EditorProvider>
+);
 
 export default Index;
