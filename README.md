@@ -1,20 +1,40 @@
-# OpenLens
+<p align="center">
+  <img src="OpenLens.png" alt="OpenLens Logo" width="120" height="120">
+</p>
 
-Static browser-based image editor built with plain HTML, CSS, and JavaScript.
+<h1 align="center">OpenLens</h1>
 
-## Features
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License: AGPL v3">
+  </a>
+  <img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status: Active">
+</p>
 
-- Crop with interactive selection
-- Resize with aspect-ratio lock
-- Rotate by 90 degrees or a custom angle
-- Convert between PNG, JPEG, and WebP
-- Compress JPEG and WebP with a quality slider
-- Remove backgrounds locally in the browser with IMG.LY
-- Download processed files without uploading images to a server
+<p align="center">
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
+</p>
 
-## Deployment
+<p align="center">
+  <strong>Static browser-based image editor built with plain HTML, CSS, and JavaScript.</strong>
+</p>
 
-This project is GitHub Pages friendly. It only needs these files:
+---
+
+##  Features
+
+- **Crop & Resize**: Interactive selection with aspect-ratio lock.
+- **Rotate**: Rotate by 90 degrees or fine-tune with a custom angle.
+- **Convert**: Seamlessly switch between PNG, JPEG, and WebP formats.
+- **Compress**: Optimize JPEG and WebP images with a quality slider.
+- **Privacy-First**: Remove backgrounds locally in the browser with IMG.LY's on-device AI.
+- **No Uploads**: Images stay on your machine—zero latency, enhanced security.
+
+##  Deployment
+
+This project is fully static and GitHub Pages friendly. It requires only the core files:
 
 - `index.html`
 - `styles.css`
@@ -22,6 +42,10 @@ This project is GitHub Pages friendly. It only needs these files:
 
 ## Notes
 
-- `CropperJS` and `Pica` are loaded from CDN for browser-side editing.
-- Background removal uses `@imgly/background-removal` via CDN and downloads its model files into the browser cache on first use.
-- Images stay on the user's machine unless they explicitly choose to upload them somewhere else.
+- **Dependencies**: `CropperJS` and `Pica` are loaded via CDN for powerful editing capabilities.
+- **AI Integration**: Background removal uses `@imgly/background-removal` via CDN, downloading model files to the browser cache on first use.
+- **Data Privacy**: All processing happens client-side. Your images are never uploaded to any server.
+
+## License
+
+This project is licensed under the **AGPLv3**. See the [LICENSE](LICENSE) file for details.
